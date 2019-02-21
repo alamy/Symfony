@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/indra/Área%20de%20Trabalho/aula/curso/codigos/src/Controller/PostController.php</file>
+            <file>file:/home/indra/Área%20de%20Trabalho/aula/curso/codigos/src/Controller/ComentarioController.php</file>
+            <file>file:/home/indra/Área%20de%20Trabalho/aula/curso/codigos/src/Manager/ComentarioManager.php</file>
+            <file>file:/home/indra/Área%20de%20Trabalho/aula/curso/codigos/templates/comentario/new.html.twig</file>
+            <file>file:/home/indra/Área%20de%20Trabalho/aula/curso/codigos/src/Manager/PostManager.php</file>
+            <file>file:/home/indra/Área%20de%20Trabalho/aula/curso/codigos/src/Form/ComentarioType.php</file>
+            <file>file:/home/indra/Área%20de%20Trabalho/aula/curso/codigos/templates/post/index.html.twig</file>
+            <file>file:/home/indra/Área%20de%20Trabalho/aula/curso/codigos/config/doctrine/Comentario.orm.yml</file>
+            <file>file:/home/indra/Área%20de%20Trabalho/aula/curso/codigos/src/Entity/Post.php</file>
+            <file>file:/home/indra/Área%20de%20Trabalho/aula/curso/codigos/src/Entity/Comentario.php</file>
+            <file>file:/home/indra/Área%20de%20Trabalho/aula/curso/codigos/config/routes.yaml</file>
+            <file>file:/home/indra/Área%20de%20Trabalho/aula/curso/codigos/src/Repository/ComentarioRepository.php</file>
+        </group>
+    </open-files>
+</project-private>
