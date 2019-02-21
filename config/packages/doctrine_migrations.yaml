@@ -1,0 +1,4 @@
+doctrine_migrations:
+    dir_name: '%kernel.project_dir%/src/Migrations'
+    # Diferente de App\Migrations, porque migrations não podem ser autoloaded
+    namespace: DoctrineMigrations

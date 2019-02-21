@@ -1,0 +1,52 @@
+post_index:
+    path: /
+    controller: App\Controller\PostController::index
+    methods: [GET]
+    
+post_new:
+    path: /new
+    controller: App\Controller\PostController::new
+    methods: [GET, POST]
+    
+post_show:
+    path: /{id}
+    controller: App\Controller\PostController::show
+    methods: [GET]
+    
+post_edit:
+    path: /{id}/edit
+    controller: App\Controller\PostController:edit
+    methods: [GET, POST]
+    
+post_delete:
+    path: /{id}
+    controller: App\Controller\PostController:delete
+    methods: [DELETE]
+    
+comentario_index:
+    path: /comentario/{post}
+    controller: App\Controller\ComentarioController::index
+    methods: [GET]
+
+comentario_new:
+    path: /new/{post}
+    controller: App\Controller\ComentarioController::new
+    methods: [GET, POST]
+
+comentario_show:
+    path: /{id}/{post}
+    controller: App\Controller\ComentarioController::show
+    methods: [GET]
+
+comentario_edit:
+    path: /{id}/{post}/edit
+    controller: App/Controller/ComentarioController::edit
+    methods: [GET, POST]
+    
+comentario_delete:
+    path: /{id}/{post}
+    controller: App/Controller/ComentarioController::delete
+    methods: [DELETE]
+    
+        
+        

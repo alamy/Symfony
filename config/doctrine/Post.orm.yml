@@ -1,0 +1,33 @@
+App\Entity\Post:
+    type: entity
+    table: post
+    repositoryClass: App\Repository\PostRepository
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        titulo:
+            type: string
+            nullable: false
+        
+        dataCriacao:
+            type: datetime
+            nullable: false
+        
+        conteudo:
+            type: text
+            nullable: false
+        
+    oneToMany:
+        comentarios:
+          targetEntity: Comentario
+          mappedBy: post
+
+    
+            
+            
+     
+            
+    

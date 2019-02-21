@@ -1,0 +1,3 @@
+swiftmailer:
+    # Em dev, desconsidera os destinatários dos e-mails e envia todos os e-mails exclusivamente para os e-mails abaixo
+    delivery_addresses: ['email@localhost']

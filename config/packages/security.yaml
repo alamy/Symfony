@@ -1,0 +1,15 @@
+security:
+    providers:
+        in_memory: { memory: ~ }
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt|error)|css|images|js)/
+            security: false
+        # Para ativar o EMAC, leia http://gitana.recife/php/emac_bundle/blob/master/README.md
+        main:
+            anonymous: true
+            logout_on_user_change: true
+
+    # Atenção: Apenas a primeira regra que coincidir será usada
+    access_control:
+        # - { path: ^/admin, roles: ROLE_EMAC }

@@ -1,0 +1,33 @@
+App\Entity\Comentario:
+    type: entity
+    table: comentarios
+    repositoryClass: App\Repository\ComentarioRepository
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        nome:
+            type: string
+            nullable: false
+        
+        dataCriacao:
+            type: datetime
+            nullable: false
+        
+        conteudo:
+            type: text
+            nullable: false
+        
+    manyToOne:
+        post:
+          targetEntity: Post
+          inversedBy: comentarios
+          joinColumn:
+            name: post_id
+            referencedColumnName: id
+
+    
+            
+            

@@ -1,0 +1,5 @@
+swiftmailer:
+    transport: smtp
+    host: smtp.recife.pe.gov.br
+    port: 25
+    spool: { type: 'memory' }

@@ -1,0 +1,9 @@
+parameters:
+
+services:
+    _defaults:
+        autowire: true      # Automaticamente injeta as dependências
+        autoconfigure: true # Automaticamente registra os serviços como commands, event subscribers, etc.
+        public: false       # Automaticamente remove os serviços não utilizados do container.
+
+    # Insira abaixo os serviços adicionais da aplicação específicos para o ambiente de produção

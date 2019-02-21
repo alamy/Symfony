@@ -1,0 +1,3 @@
+emprel_datasource:
+    # Array de datasources, ex.: dspont01
+    datasources: ~

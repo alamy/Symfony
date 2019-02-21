@@ -1,0 +1,21 @@
+parameters:
+    locale: 'pt_BR'
+    container.autowiring.strict_mode: true
+
+services:
+    _defaults:
+        autowire: true      # Automaticamente injeta as dependências
+        autoconfigure: true # Automaticamente registra os serviços como commands, event subscribers, etc.
+        public: false       # Automaticamente remove os serviços não utilizados do container.
+
+    # Cria um serviço para cada classe em src, onde o nome do serviço é o nome qualificado da classe
+    App\:
+        resource: '../src/*'
+        exclude: '../src/{Entity,Migrations,Tests,Kernel.php}'
+
+    # Cria também um serviço para os controllers, mas também adiciona a tag necessária para injetar os parâmetros das actions corretamente
+    App\Controller\:
+        resource: '../src/Controller'
+        tags: ['controller.service_arguments']
+
+    # Insira abaixo os serviços adicionais da aplicação comum a todos os ambientes

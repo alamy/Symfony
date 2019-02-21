@@ -1,0 +1,26 @@
+parameters:
+    # Valor default para não gerar error ao limpar o cache
+    env(DATABASE_URL): 'sqlite:///%kernel.project_dir%/var/data/app.db'
+
+doctrine:
+    dbal:
+        charset: utf8
+        default_table_options:
+            charset: utf8
+            collate: utf8
+        url: '%env(resolve:DATABASE_URL)%'
+        # Usando Datasource, ex DATASOURCE_DSPONT01_URL
+        #url: '%env(DATASOURCE_NOME_URL)%'
+        # Regex de filtro para o Schema Tool, as tabelas que não corresponderem serão ignoradas
+        schema_filter: '/^.*/'
+    orm:
+        auto_generate_proxy_classes: '%kernel.debug%'
+        naming_strategy: doctrine.orm.naming_strategy.underscore
+        auto_mapping: true
+        mappings:
+            App:
+                is_bundle: false
+                type: yml
+                dir: '%kernel.project_dir%/config/doctrine'
+                prefix: 'App\Entity'
+                alias: App
