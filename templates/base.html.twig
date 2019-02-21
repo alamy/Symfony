@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        {% block stylesheets %}
+            
+
+            <link rel="stylesheet" href="{{ asset('dist/css/materialize.css') }}"  />
+        
+        {% endblock %}
+    </head>
+    <body>
+
+                    <nav class="blue darken-4">
+                        <div class="nav-wrapper container ">
+                            <a href="#" class="brand-logo">Curso Symfony</a>
+                            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                                <li><a href="/">Inicio</a></li>
+                                <li><a href="/post">Post</a></li>
+                                
+                            </ul>
+                        </div>
+                    </nav>    
+
+            
+        
+        {% block body %}
+            <h1>você esta na pagina inicial</h1>
+            
+        {% endblock %}
+        
+        
+        
+        
+        
+        
+        {% block javascripts %}
+            <script src="{{ asset('../dist/css/materialize.min.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>
