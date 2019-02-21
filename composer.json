@@ -1,0 +1,92 @@
+{
+    "type": "project",
+    "license": "proprietary",
+    "repositories": [{
+        "type": "composer",
+        "url": "http://condor.recife"
+    }],
+    "require": {
+        "php": "^7.1.0",
+        "ext-iconv": "*",
+        "easycorp/easy-log-handler": "^1.0",
+        "emprel/ambiente-bundle": "^3.0",
+        "emprel/composer-scripts": "^2.0",
+        "emprel/datasource-bundle": "^2.0",
+        "emprel/test-bundle": "^1.0",
+        "sensio/framework-extra-bundle": "^5.1",
+        "symfony/asset": "^3.4",
+        "symfony/console": "^3.4",
+        "symfony/expression-language": "^3.4",
+        "symfony/flex": "^1.0",
+        "symfony/form": "^3.4",
+        "symfony/framework-bundle": "^3.4",
+        "symfony/lts": "^3",
+        "symfony/monolog-bundle": "^3.1",
+        "symfony/orm-pack": "*",
+        "symfony/process": "^3.4",
+        "symfony/security-bundle": "^3.4",
+        "symfony/serializer-pack": "*",
+        "symfony/swiftmailer-bundle": "^3.1",
+        "symfony/templating": "^3.4",
+        "symfony/twig-bundle": "^3.4",
+        "symfony/validator": "^3.4",
+        "symfony/web-link": "^3.4",
+        "symfony/webpack-encore-pack": "*",
+        "symfony/yaml": "^3.4"
+    },
+    "require-dev": {
+        "symfony/browser-kit": "^3.4",
+        "symfony/css-selector": "^3.4",
+        "symfony/debug-pack": "*",
+        "symfony/dotenv": "^3.4",
+        "symfony/maker-bundle": "^1.0",
+        "symfony/phpunit-bridge": "^3.4",
+        "symfony/profiler-pack": "*",
+        "symfony/web-server-bundle": "^3.4"
+    },
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true,
+        "secure-http": false
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "replace": {
+        "symfony/polyfill-iconv": "*",
+        "symfony/polyfill-php70": "*",
+        "symfony/polyfill-php56": "*"
+    },
+    "scripts": {
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
+        },
+        "post-install-cmd": [
+            "Emprel\\Composer\\Script\\ScriptHandler::gerarSecret",
+            "@auto-scripts"
+        ],
+        "post-update-cmd": [
+            "Emprel\\Composer\\Script\\ScriptHandler::atualizarSecret",
+            "@auto-scripts"
+        ]
+    },
+    "conflict": {
+        "symfony/symfony": "*"
+    },
+    "extra": {
+        "symfony": {
+            "allow-contrib": true,
+            "endpoint": "http://flex.recife"
+        }
+    }
+}
